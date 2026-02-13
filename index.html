@@ -29,35 +29,13 @@
             <a href="ay.html?ay=aralik" class="month-card"><div class="month-number">12</div><div class="month-name">Aralık</div></a>
         </div>
 
-        <div style="text-align: center; margin-top: 40px; display: none;" id="continueButtonContainer">
+        <div style="text-align: center; margin-top: 40px;" id="continueButtonContainer">
             <a href="oyun.html" class="continue-button">Devam Et →</a>
         </div>
     </div>
 
     <script src="hearts.js"></script>
 
-    <!-- INLINE SCRIPT -->
-    <script>
-        const allMonths = [
-            'ocak','subat','mart','nisan','mayis','haziran',
-            'temmuz','agustos','eylul','ekim','kasim','aralik'
-        ];
-
-        document.addEventListener('DOMContentLoaded', function () {
-            checkAllMonthsVisited();
-        });
-
-        function checkAllMonthsVisited() {
-            const visitedMonths = JSON.parse(localStorage.getItem('visitedMonths') || '[]');
-            const allVisited = allMonths.every(month => visitedMonths.includes(month));
-            const continueButtonContainer = document.getElementById('continueButtonContainer');
-
-            if (allVisited && continueButtonContainer) {
-                continueButtonContainer.style.display = 'block';
-                continueButtonContainer.style.animation = 'fadeInUp 0.8s ease';
-            }
-        }
-    </script>
 
 </body>
 </html>
